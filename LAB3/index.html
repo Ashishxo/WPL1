@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Raleway:wght@100;200&family=Roboto&display=swap" rel="stylesheet">
+
+    <title>FurniHub</title>
+</head>
+<body>
+    
+    <div id="navbar">
+        <div id="logo">
+            <img src="./assets/logo.png" alt="">
+        </div>
+        <div id="navlinks">
+            <a href="#">Home</a>
+            <a href="#"> About</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div id="signin">
+            <a href="#" class="rl">Register</a>
+            <a href="#" class="rl">Login</a>
+        </div>
+    </div>
+
+    <section>
+        <h1 id="heading">Explore </h1>
+        <h1 id="subheading">OUR WIDE RANGE OF FURNITURE</h1>
+        <div id="furniture">
+            <div class="card" id="img1">
+                <img src="./assets/sofa.png" alt="">  
+                    
+                <div class="label">
+                    <span>Sofa</span>
+                    <span>₹ 10,000</span>
+                </div>
+            </div>
+
+            <div class="card" id="img2">
+                <img src="./assets/chair.png" alt="">
+            
+                <div class="label">
+                    <span>Chair</span>
+                    <span>₹ 5,000</span>
+                </div>
+            </div>
+
+            <div class="card" id="img3">
+                <img src="./assets/table.png" alt="">
+            
+                <div class="label">
+                    <span>Table</span>
+                    <span>₹ 3,000</span>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <script>
+        const cursorDot = document.querySelector("[data-cursor-dot]")
+        const cursorOutline = document.querySelector("[data-cursor-outline]")
+
+        window.addEventListener("mousemove", (e)=>{
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            cursorDot.style.top = `${posY}px`;
+            cursorDot.style.left = `${posX}px`;
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, {duration: 100, fill: "forwards"})
+        })
+
+
+        let signin = document.querySelector("#signin")
+        signin.addEventListener("mouseover", ()=>{
+            cursorDot.style.backgroundColor = "white";
+            cursorOutline.style.borderColor = "white";
+        })
+
+        signin.addEventListener("mouseout", ()=>{
+            cursorDot.style.backgroundColor = "black";
+            cursorOutline.style.borderColor = "black";
+        })
+
+    </script>
+</body>
+</html>

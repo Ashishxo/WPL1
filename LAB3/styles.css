@@ -1,0 +1,124 @@
+
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#navlinks{
+    display: flex;
+    justify-content: space-between;
+    gap: 60px; 
+    margin-left: 20px;   
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#signin{
+    display: flex;
+    gap: 10px;
+    margin-right: 40px;
+    margin-top: -10px;
+}
+
+.rl{
+    border: 1px solid;
+    padding: 10px 16px;
+    border-radius: 30px;
+    transition: 0.2s;
+}
+
+.rl:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+section{
+    margin-left: 50px;
+}
+
+#heading{
+    display: inline-block;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 130px;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+#subheading{
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#furniture{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+#img1{
+    background-color: rgb(226,235,236);
+    color: rgb(100, 210, 222);
+}
+
+#img2{
+    background-color: rgb(245,227,229);
+    color: rgb(238, 129, 141);
+}
+
+#img3{
+    background-color: rgb(231,231,232);
+    color: rgb(147, 147, 220);
+}
+
+
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card{
+    width:240px;
+    height: 260px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.card:hover{
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+    transform: translate(-3px, -3px);
+}
+
+.label{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+#logo{
+    height: 50px;
+    margin-left: 40px;
+    margin-top: -10px;
+}
+
+
+
