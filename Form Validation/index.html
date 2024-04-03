@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Form</title>
+</head>
+<body>
+
+    <form action="">
+        Name: <input  type="text" required>
+        Password: <input type="password" name="" id="password">
+        <input type="submit" value="Submit" onclick="myFunction(event)">
+    </form>
+    
+    <p id="demo"></p>
+
+
+
+
+
+
+    
+    <script>
+
+    
+
+    function myFunction(e){
+        e.preventDefault();
+        let sex = document.getElementById("password").value;
+        
+        if (sex.length < 8){
+            document.getElementById("demo").innerHTML = "Password too short!";
+        } else if (!/[0123456789]/.test(sex)){
+            document.getElementById("demo").innerHTML = "Password should have atleast one digit!";
+        } else if (!/[a-zA-Z]/.test(sex)){
+            document.getElementById("demo").innerHTML = "Password Should have atleast one letter";
+        }else if (!/[!@#$%^&*()_+~.,/?]/.test(sex)){
+            document.getElementById("demo").innerHTML = "Password must have atleast one special Character!";
+        }
+        else{
+            document.getElementById("demo").innerHTML = "Password is Valid!";
+        }
+
+
+
+
+        
+    }
+
+    
+    </script>
+    
+    </body>
+
+
+</html>
